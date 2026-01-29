@@ -1,0 +1,3 @@
+{
+  "extends": "@restful-blogging-api/config/tsconfig.base.json"
+}

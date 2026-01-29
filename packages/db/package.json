@@ -1,0 +1,23 @@
+{
+  "name": "@restful-blogging-api/db",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@restful-blogging-api/env": "*",
+    "dotenv": "^17.2.2",
+    "mongoose": "^8.14.0",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@restful-blogging-api/config": "*",
+    "typescript": "^5"
+  }
+}
