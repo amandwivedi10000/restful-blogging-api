@@ -7,6 +7,7 @@ import router from "./routes/posts.route";
 export async function startServer() {
     await connectDB();
 
+    // basic setup
     const app = express();
     // if I develop a frontend for it later down the road
     app.use(
@@ -15,10 +16,11 @@ export async function startServer() {
             methods: ["GET", "POST", "OPTIONS", "PUT", "PATCH", "DELETE"],
         }),
     );
+    app.use(express.json());
 
+    // routes
     app.use("/posts", router);
 
-    app.use(express.json());
     app.get("/", (_req, res) => {
         res.status(200).send("OK");
     });
